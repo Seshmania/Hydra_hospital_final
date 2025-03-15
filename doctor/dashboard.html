@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="dashboard.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+
+<body>
+    <div class="dashboard-container">
+        <!-- Top Section -->
+        <div class="top-section">
+            <h1>Doctor's Dashboard</h1>
+            <div class="top-cards">
+                <div class="top-card">
+                    <i class="fas fa-user-friends"></i>
+                    <span class="card-title">Patients</span>
+                    <span class="card-value">6,600</span>
+                </div>
+                <div class="top-card">
+                    <i class="fas fa-dollar-sign"></i>
+                    <span class="card-title">Income</span>
+                    <span class="card-value">$21,111</span>
+                </div>
+                <div class="top-card">
+                    <i class="fas fa-calendar-day"></i>
+                    <span class="card-title">Appointments</span>
+                    <span class="card-value">211</span>
+                </div>
+                <div class="top-card">
+                    <i class="fas fa-stethoscope"></i>
+                    <span class="card-title">Treatments</span>
+                    <span class="card-value">402</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Main Content Section -->
+        <div class="main-content">
+            <!-- Left Section: Dashboard Cards -->
+            <div class="dashboard-cards">
+                <!-- Card 1 -->
+                <div class="dashboard-card">
+                    <h3>Appointments Today</h3>
+                    <p>12 Appointments</p>
+                </div>
+                <!-- Card 2 -->
+                <div class="dashboard-card">
+                    <h3>Pending Tasks</h3>
+                    <p>5 Tasks</p>
+                </div>
+                <!-- Card 3 -->
+                <div class="dashboard-card">
+                    <h3>Messages</h3>
+                    <p>3 New Messages</p>
+                </div>
+                <!-- Card 4 -->
+                <div class="dashboard-card">
+                    <h3>Medicines</h3>
+                    <p>10 Items</p>
+                </div>
+            </div>
+
+            <!-- Right Section: Doctor Profile -->
+            <div class="doctor-profile">
+                <div class="profile-image">
+                    <img src="doctor.jpg" alt="Doctor Image">
+                </div>
+                <div class="profile-details">
+                    <h2>Dr. Saurav Kalathoki</h2>
+                    <p class="specialty">Cardiologist</p>
+                    <div class="rating">
+                        <span class="stars">★★★★★</span>
+                        <span class="rating-value">4.9/5</span>
+                    </div>
+                    <p class="bio">Experienced cardiologist with over 10 years of practice. Specializes in heart health
+                        and preventive care.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

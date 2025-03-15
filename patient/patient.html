@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hydra Hospital - Patient Portal</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css">
+    <link rel="stylesheet" href="patient.css">
+    <link rel="shortcut icon" href="/img/logo.png" type="image/x-icon">
+</head>
+<body>
+    
+    <div class="emergency-alert">
+        <span><i class="fas fa-phone-emergency"></i> Emergency: +977 081-400011 | 24/7 Service</span>
+        <div class="social-top">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+        </div>
+    </div>
+
+    
+    <header class="sticky-nav">
+        <nav class="navtool">
+            <div class="logo-container">
+                <img src="/img/logo.png" alt="Hospital Logo">
+                <div>
+                    <h1>Hydra Hospital</h1>
+                    <p>Compassionate Care Since 1995</p>
+                </div>
+            </div>
+            
+            <div class="nav-right">
+                <div class="search-container">
+                    <input type="search" placeholder="Search services...">
+                    <button><i class="fas fa-search"></i></button>
+                </div>
+                <ul class="nav-menu">
+                    <li><a href="/" class="active">Home</a></li>
+                    <li class="dropdown">
+                        <a href="#">Services <i class="fas fa-chevron-down"></i></a>
+                        <div class="dropdown-content">
+                            <a href="/emergency">Emergency Care</a>
+                            <a href="/surgery">Surgical Services</a>
+                            <a href="/maternity">Maternity Care</a>
+                        </div>
+                    </li>
+                    <li><a href="/doctors">Find a Doctor</a></li>
+                    <li><a href="/appointment">Appointments</a></li>
+                    <li><a href="/login" class="auth-btn"><i class="fas fa-user-circle"></i> Patient Portal</a></li>
+                </ul>
+                <div class="mobile-menu-toggle">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <div class="swiper mySwiper">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide" style="background-image: url('/img/hero1.jpg')">
+                    <div class="hero-content">
+                        <h2>Advanced Cardiac Care</h2>
+                        <p>State-of-the-art cardiovascular treatments</p>
+                        <a href="#" class="cta-btn">Learn More</a>
+                    </div>
+                </div>
+                <div class="swiper-slide" style="background-image: url('/img/hero2.jpg')">
+                    <div class="hero-content">
+                        <h2>Pediatric Excellence</h2>
+                        <p>Specialized care for our youngest patients</p>
+                        <a href="#" class="cta-btn">Meet Our Team</a>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-pagination"></div>
+        </div>
+    </section>
+
+    
+    <section class="quick-access">
+        <div class="access-grid">
+            <div class="access-card emergency">
+                <i class="fas fa-ambulance"></i>
+                <h3>Emergency Services</h3>
+                <p>Immediate medical attention 24/7</p>
+            </div>
+            <div class="access-card appointment">
+                <i class="fas fa-calendar-check"></i>
+                <h3>Book Appointment</h3>
+                <p>Schedule with our specialists</p>
+            </div>
+            <div class="access-card records">
+                <i class="fas fa-file-medical"></i>
+                <h3>Medical Records</h3>
+                <p>Access your health history</p>
+            </div>
+        </div>
+    </section>
+
+   
+    <section class="specialized-services">
+        <h2 class="section-title">Our Specialized Services</h2>
+        <div class="services-grid">
+          
+        </div>
+    </section>
+
+    <div class="wait-times">
+        <div class="wait-time-card">
+            <h4><i class="fas fa-clock"></i> Emergency Wait Time</h4>
+            <p>Approx. 15 minutes</p>
+        </div>
+        <div class="wait-time-card">
+            <h4><i class="fas fa-procedures"></i> ICU Availability</h4>
+            <p>12 beds available</p>
+        </div>
+    </div>
+
+    <!-- Patient Dashboard Section -->
+    <section class="patient-dashboard">
+        <h2>Your Health Overview</h2>
+        <div class="dashboard-grid">
+            <div class="dashboard-card appointments">
+                <h3>Upcoming Appointments</h3>
+                
+            </div>
+            <div class="dashboard-card medications">
+                <h3>Current Medications</h3>
+             
+            </div>
+            <div class="dashboard-card health-tracker">
+                <h3>Health Tracker</h3>
+                
+            </div>
+        </div>
+    </section>
+
+    <!-- Telemedicine Section -->
+    <section class="telemedicine">
+        <div class="telemedicine-content">
+            <div class="telemedicine-text">
+                <h2>Virtual Consultations</h2>
+                <p>Connect with doctors from home</p>
+                <button class="video-consult-btn">
+                    <i class="fas fa-video"></i> Start Video Call
+                </button>
+            </div>
+            <div class="telemedicine-image">
+                <img src="/img/telemed.jpg" alt="Telemedicine">
+            </div>
+        </div>
+    </section>
+
+    <!-- Enhanced Footer -->
+    <footer class="main-footer">
+        <div class="footer-grid">
+            <div class="footer-section about">
+                <img src="/img/logo-white.png" alt="Hospital Logo">
+                <p>Committed to excellence in healthcare since 1995</p>
+                <div class="awards">
+                    <img src="/img/award1.png" alt="Award 1">
+                    <img src="/img/award2.png" alt="Award 2">
+                </div>
+            </div>
+            <div class="footer-section quick-links">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="/about">About Us</a></li>
+                    <li><a href="/careers">Careers</a></li>
+                    <li><a href="/news">News & Events</a></li>
+                    <li><a href="/privacy">Privacy Policy</a></li>
+                </ul>
+            </div>
+            <div class="footer-section contact-info">
+                <h4>Contact Us</h4>
+                <p><i class="fas fa-map-marker-alt"></i> 123 Health Street, Medical City</p>
+                <p><i class="fas fa-phone"></i> +977 081-400000</p>
+                <p><i class="fas fa-envelope"></i> contact@hydrahospital.com</p>
+            </div>
+            <div class="footer-section newsletter">
+                <h4>Health Newsletter</h4>
+                <input type="email" placeholder="Enter your email">
+                <button>Subscribe</button>
+                <div class="app-stores">
+                    <img src="/img/google-play.png" alt="Google Play">
+                    <img src="/img/app-store.png" alt="App Store">
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Hydra Hospital. All rights reserved. | <a href="/terms">Terms of Use</a></p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+    <script src="patient.js"></script>
+</body>
+</html>

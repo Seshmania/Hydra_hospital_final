@@ -1,0 +1,94 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+
+
+header {
+    background-color: white;
+    
+}
+.logo {
+    img{
+        justify-content: center;
+        align-items: center;
+    }
+    
+}
+
+nav{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: large;
+}
+nav ul{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: red;
+}
+nav ul{
+    list-style-type: none;
+}
+nav ul li a{
+    text-decoration: none;
+    color: yellow;
+
+}
+nav ul li a:hover{
+    display: block;
+    color: black;
+}
+main {
+    padding: 15px;
+}
+
+
+h1{
+    text-align: center;
+    color: goldenrod;
+}
+
+
+
+/* Grid Styles */
+.services-grid{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+
+.service-card{
+    background: white;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px greenyellow;
+    transition: transform 0.3s ease;
+}
+
+.service-card:hover, .story-card:hover, .news-card:hover {
+    transform: translateY(-5px);
+}
+.service-card{
+    h3{
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+        color: #28a745;
+    }
+
+    p{
+        color: orangered;
+        font-weight: 20px;
+        font-family: Georgia, 'Times New Roman', Times, serif;
+    }
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    margin-top: 20px;
+}

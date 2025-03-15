@@ -1,0 +1,365 @@
+/* ===== CSS Variables ===== */
+:root {
+    --primary-color: #2a5c82;
+    --secondary-color: #5cbdb9;
+    --accent-color: #ff6b6b;
+    --dark-text: #2c3e50;
+    --light-text: #f8f9fa;
+    --gradient-blue: linear-gradient(135deg, #2a5c82 0%, #3a7ca5 100%);
+    --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', system-ui, sans-serif;
+  }
+  
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    background: #f8f9fa;
+    color: var(--dark-text);
+    line-height: 1.6;
+  }
+  
+  .emergency-alert {
+    background: var(--primary-color);
+    color: white;
+    padding: 0.8rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.9rem;
+  }
+  
+  .social-top a {
+    color: white;
+    margin-left: 1.5rem;
+    transition: opacity 0.3s;
+  }
+  
+  .social-top a:hover {
+    opacity: 0.8;
+  }
+  
+  .sticky-nav {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background: white;
+    box-shadow: var(--shadow);
+  }
+  
+  .navtool {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    max-width: 1400px;
+    margin: 0 auto;
+  }
+  
+  .logo-container {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+  
+  .brand-logo {
+    height: 50px;
+    width: auto;
+  }
+  
+  .brand-text h1 {
+    font-size: 1.8rem;
+    color: var(--primary-color);
+  }
+  
+  .brand-text p {
+    font-size: 0.8rem;
+    color: #666;
+  }
+  
+  .nav-menu {
+    display: flex;
+    gap: 2rem;
+    list-style: none;
+  }
+  
+  .nav-menu a {
+    text-decoration: none;
+    color: var(--dark-text);
+    font-weight: 500;
+    transition: color 0.3s;
+  }
+  
+  .nav-menu a:hover,
+  .nav-menu .active {
+    color: var(--primary-color);
+  }
+  
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background: white;
+    box-shadow: var(--shadow);
+    border-radius: 5px;
+    padding: 1rem;
+    min-width: 200px;
+  }
+  
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+  
+  .hero {
+    height: 80vh;
+    position: relative;
+  }
+  
+  .swiper {
+    width: 100%;
+    height: 100%;
+  }
+  
+  .swiper-slide {
+    position: relative;
+    background-size: cover;
+    background-position: center;
+  }
+  
+  .swiper-slide::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4);
+  }
+  
+  .hero-content {
+    position: relative;
+    z-index: 1;
+    color: white;
+    max-width: 800px;
+    padding: 2rem;
+    margin-left: 5%;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  
+  .hero-content h2 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+  }
+  
+  .cta-btn {
+    display: inline-block;
+    padding: 1rem 2rem;
+    background: var(--accent-color);
+    color: white;
+    text-decoration: none;
+    border-radius: 30px;
+    transition: transform 0.3s;
+  }
+  
+  .cta-btn:hover {
+    transform: translateY(-3px);
+  }
+  
+  .quick-access {
+    padding: 4rem 2rem;
+    background: white;
+  }
+  
+  .access-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .access-card {
+    padding: 2rem;
+    border-radius: 15px;
+    text-align: center;
+    transition: transform 0.3s;
+    background: white;
+    box-shadow: var(--shadow);
+  }
+  
+  .access-card:hover {
+    transform: translateY(-10px);
+  }
+  
+  .access-card i {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: var(--primary-color);
+  }
+  
+  .access-card h3 {
+    margin-bottom: 0.5rem;
+  }
+  
+  .patient-dashboard {
+    padding: 4rem 2rem;
+    background: #f1f5f8;
+  }
+  
+  .dashboard-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 2rem auto;
+  }
+  
+  .dashboard-card {
+    background: white;
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: var(--shadow);
+  }
+  
+  .telemedicine {
+    padding: 4rem 2rem;
+    background: var(--gradient-blue);
+    color: white;
+  }
+  
+  .telemedicine-content {
+    display: flex;
+    align-items: center;
+    gap: 4rem;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .telemedicine-image {
+    flex: 1;
+    border-radius: 15px;
+    overflow: hidden;
+  }
+  
+  .telemedicine-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+  
+  .telemedicine-text {
+    flex: 1;
+  }
+  
+  .video-consult-btn {
+    background: var(--accent-color);
+    color: white;
+    padding: 1rem 2rem;
+    border: none;
+    border-radius: 30px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: transform 0.3s;
+    margin-top: 1.5rem;
+  }
+  
+  .video-consult-btn:hover {
+    transform: translateY(-3px);
+  }
+  
+  /* ===== Footer Styles ===== */
+  .main-footer {
+    background: var(--primary-color);
+    color: white;
+    padding: 4rem 2rem;
+  }
+  
+  .footer-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 3rem;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .footer-section h4 {
+    margin-bottom: 1.5rem;
+    font-size: 1.2rem;
+  }
+  
+  .footer-section ul {
+    list-style: none;
+  }
+  
+  .footer-section ul li {
+    margin-bottom: 0.8rem;
+  }
+  
+  .footer-section a {
+    color: rgba(255, 255, 255, 0.8);
+    text-decoration: none;
+    transition: color 0.3s;
+  }
+  
+  .footer-section a:hover {
+    color: white;
+  }
+  
+  .app-stores {
+    margin-top: 1.5rem;
+    display: flex;
+    gap: 1rem;
+  }
+  
+  .app-stores img {
+    height: 40px;
+    width: auto;
+  }
+  
+  /* ===== Responsive Design ===== */
+  @media (max-width: 1024px) {
+    .nav-menu {
+      display: none;
+    }
+  
+    .mobile-menu-toggle {
+      display: block;
+    }
+  
+    .telemedicine-content {
+      flex-direction: column;
+      text-align: center;
+    }
+  
+    .hero-content h2 {
+      font-size: 2rem;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .navtool {
+      padding: 1rem;
+    }
+  
+    .brand-text h1 {
+      font-size: 1.4rem;
+    }
+  
+    .emergency-alert {
+      flex-direction: column;
+      gap: 0.5rem;
+      text-align: center;
+    }
+  
+    .social-top {
+      margin-top: 0.5rem;
+    }
+  }

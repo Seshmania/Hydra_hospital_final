@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Doctor - Portal</title>
+    <link rel="stylesheet" href="doctor.css">
+    <link rel="shortcut icon" href="../assets/logo.png" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>
+    <!-- Shared Container -->
+    <div class="container">
+        <!-- Navigation Bar  -->
+        <div class="nav-bar">
+            <a href="dashboard.html" target="frame"><i class="material-icons">dashboard</i>Dashboard</a>
+            <a href="schedule.html" target="frame"><i class="material-icons">schedule</i>Schedule</a>
+            <a href="appointments.html" target="frame"><i class="material-icons">event</i>Appointments</a>
+            <a href="message.html" target="frame"><i class="material-icons">message</i>Messages</a>
+            <a href="medicine.html" target="frame"><i class="material-icons">local_pharmacy</i>Medicines</a>
+            <a href="#"><i class="material-icons">logout</i>Logout</a>
+        </div>
+        
+        <!-- Main Content Area with iframe -->
+        <div class="iframe-container">
+            <iframe name="frame" class="main" src="dashboard.html"></iframe>
+        </div>
+    </div>
+</body>
+</html>
