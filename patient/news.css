@@ -1,26 +1,129 @@
-*{
+/* General Styles */
+body {
+    font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
+    background-color: #f4f4f9;
+    color: #333;
+    line-height: 1.6;
 }
 
-nav ul{
-    list-style-type: none;
-    display: flex;
-    flex-direction: row;
-    gap: 425px;
-    background-color: yellowgreen;
+h1, h3 {
+    color: #2c3e50;
+}
 
-}
-a:hover{
-    display: block;
-    color: red;
-    background-color: #fff;
-    transform: translateY(-4px);
-}
-nav ul li a{
+a {
+    color: #3498db;
     text-decoration: none;
 }
-h2{
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* News Container */
+.news-container {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 20px;
+    background: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.news-container h1 {
     text-align: center;
-    color: darkseagreen;
+    margin-bottom: 30px;
+    font-size: 2.5em;
+    color: #2c3e50;
+}
+
+/* News Grid */
+.news-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.news-card {
+    background: #ecf0f1;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.news-card:hover {
+    transform: translateY(-5px);
+}
+
+.news-card h3 {
+    margin-top: 0;
+    font-size: 1.5em;
+    color: #2980b9;
+}
+
+.news-card p {
+    font-size: 1em;
+    color: #555;
+}
+
+.news-card .read-more {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 8px 15px;
+    background: #3498db;
+    color: #fff;
+    border-radius: 5px;
+    font-size: 0.9em;
+    transition: background 0.3s ease;
+}
+
+.news-card .read-more:hover {
+    background: #2980b9;
+}
+
+/* FAQ Section */
+.super {
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.super h3 {
+    margin-top: 0;
+    font-size: 1.5em;
+    color: #2980b9;
+}
+
+details {
+    margin-bottom: 15px;
+}
+
+summary {
+    font-weight: bold;
+    cursor: pointer;
+    color: #2c3e50;
+}
+
+details p {
+    margin-top: 10px;
+    color: #555;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    background: #2c3e50;
+    color: #fff;
+    margin-top: 40px;
+}
+
+footer a {
+    color: #3498db;
+}
+
+footer a:hover {
+    text-decoration: underline;
 }

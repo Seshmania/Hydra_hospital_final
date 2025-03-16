@@ -81,38 +81,7 @@
     }
   }
   
- 
-  
-  /* User Authentication Section */
-  .auth-section {
-    text-align: center;
-    padding: 40px;
-  }
-  .auth-section h2 {
-    font-size: 2rem;
-    margin-bottom: 20px;
-  }
-  .auth-buttons {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    flex-wrap: wrap;
-    /* margin: 20px; */
-    
-    /* border-radius: 45px; */
-  }
-  .auth-btn {
-    background: #005f73;
-    color: #fff;
-    padding: 40px;
-    border-radius: 40px;
-    text-decoration: none;
-    transition: background 0.3s ease, transform 0.3s ease;
-  }
-  .auth-btn:hover {
-    background: #0a9396;
-    transform: scale(1.05);
-  }
+
   
   /* Features Section */
   .features {
