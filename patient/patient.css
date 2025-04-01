@@ -1,25 +1,10 @@
-/* ===== CSS Variables ===== */
-:root {
-    --primary-color: #2a5c82;
-    --secondary-color: #5cbdb9;
-    --accent-color: #ff6b6b;
-    --dark-text: #2c3e50;
-    --light-text: #f8f9fa;
-    --gradient-blue: linear-gradient(135deg, #2a5c82 0%, #3a7ca5 100%);
-    --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  }
-  
-  
-  * {
+    * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: 'Segoe UI', system-ui, sans-serif;
   }
   
-  html {
-    scroll-behavior: smooth;
-  }
   
   body {
     background: #f8f9fa;
@@ -29,18 +14,47 @@
   
   .emergency-alert {
     background: var(--primary-color);
-    color: white;
+    color: rgb(31, 167, 229);
     padding: 0.8rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    font-size: 0.9rem;
+    font-size: bolder;
   }
-  
+  .specialized-services{
+    h2{
+      color: #1d89f5;
+      text-align: center;
+    }
+    h4{
+      color: darkblue;
+    }
+    p{
+      font-weight: bolder;
+      color: Red;
+    }
+    padding: 0.8rem;
+    
+  }
+  .wait-time-card{
+    width: 100px;
+    height: 150px;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    gap: 135px;
+    align-items: center;
+    font-size: 0.9rem;
+    border-radius: 24px;
+    box-shadow: #666;
+
+  }
   .social-top a {
-    color: white;
+    background-color: transparent;
+    color: darkblue;
     margin-left: 1.5rem;
     transition: opacity 0.3s;
+    width: 30%;
   }
   
   .social-top a:hover {
@@ -51,7 +65,7 @@
     position: sticky;
     top: 0;
     z-index: 1000;
-    background: white;
+    /* background: rgb(255, 255, 255); */
     box-shadow: var(--shadow);
   }
   
@@ -61,7 +75,7 @@
     align-items: center;
     padding: 1rem 2rem;
     max-width: 1400px;
-    margin: 0 auto;
+    margin: 4px 4px 0px 4px;
   }
   
   .logo-container {
@@ -232,7 +246,7 @@
   .telemedicine {
     padding: 4rem 2rem;
     background: var(--gradient-blue);
-    color: white;
+    color: rgb(26, 198, 229);
   }
   
   .telemedicine-content {
@@ -269,6 +283,7 @@
     cursor: pointer;
     transition: transform 0.3s;
     margin-top: 1.5rem;
+    background-color: red;
   }
   
   .video-consult-btn:hover {
@@ -278,7 +293,7 @@
   /* ===== Footer Styles ===== */
   .main-footer {
     background: var(--primary-color);
-    color: white;
+    color: rgb(16, 80, 218);
     padding: 4rem 2rem;
   }
   
@@ -304,13 +319,13 @@
   }
   
   .footer-section a {
-    color: rgba(255, 255, 255, 0.8);
+    color: rgba(22, 79, 193, 0.8);
     text-decoration: none;
     transition: color 0.3s;
   }
   
   .footer-section a:hover {
-    color: white;
+    color: rgb(188, 159, 26);
   }
   
   .app-stores {
@@ -363,3 +378,106 @@
       margin-top: 0.5rem;
     }
   }
+  img{
+    width:100px;
+    /* height:00px; */
+    border-radius: 50%;
+  }
+  .footer-bottom{
+    text-align: center;
+    margin: 10px 0px 4px 0px;
+
+  }
+  .footer-sectionquick-links a{
+    padding:3px;
+    background-color: #2a5c82;
+  }
+  .specialized-services{
+    margin: 10px 0px 7px 17px;
+  }
+  .specialized-services h4,p{
+    margin-left: 14px;
+  }
+  button{
+    color: rgb(29, 51, 175);
+    background-color:#1d89f5;
+    border: none;
+    font-size: 20px;
+
+  }
+  button:hover{
+    color: skyblue;
+    cursor: pointer;
+  }
+  button.btn{
+        padding: 4px;
+         background-color: rgb(23, 183, 219);
+         color: #e9410e;
+         font-weight: bold;
+         border-radius: 10px;
+  }
+  footer.main-footer{
+    padding: 0px;
+  }
+  .footer-grid{
+    margin: 10px 10px 10px 10px;
+  }
+.footer-section .quick-links ul{
+  margin: 0px;
+}
+.dashboard-card{
+  text-align: center;
+  
+  color: whitesmoke;
+  background-color: #1d89f5;
+  
+}
+p.defn{
+  color: #1478dc;
+  font-weight: bold;
+}
+div.footer-section .about{
+  font-size: 16px;
+}
+div.awards{
+  display: flex;
+  justify-content: space-around;
+  margin-top:7px;
+}
+div.hero-content p{
+  margin: 0px 0px 3px 0px;
+  font-size: 16px;
+}
+.nav-right{
+  display:flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+div.searchbar{
+  border: 2px solid #0d4175;
+  padding: 1px;
+  padding-left: 14px;
+  margin: 0px 10px 0px 1px;
+}
+button.search-btn{
+    background-color:transparent;
+    padding: 2px;
+    color:black;
+
+
+}
+button.search-btn :hover{
+  color: #2a5c82
+
+}
+#input-searchbar{
+ 
+  border: none;
+  margin-left: 8px;
+
+}
+#input-searchbar:focus{
+  border: none;
+  outline: none;
+}

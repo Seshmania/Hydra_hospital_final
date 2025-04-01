@@ -1,86 +1,102 @@
-// Toggle between Login and Sign Up forms
-document.getElementById('signup-link').addEventListener('click', function(e) {
-    e.preventDefault();
-    document.getElementById('login-form').classList.add('hidden');
-    document.getElementById('signup-form').classList.remove('hidden');
-});
+document.addEventListener("DOMContentLoaded", function () {
+    let selectedRole = ""; // Store selected role
 
-document.getElementById('login-link').addEventListener('click', function(e) {
-    e.preventDefault();
-    document.getElementById('signup-form').classList.add('hidden');
-    document.getElementById('login-form').classList.remove('hidden');
-});
+    // Role selection buttons
+    document.getElementById("doctor-btn").addEventListener("click", function () {
+        selectedRole = "doctor";
+        highlightRole("doctor-btn");
+    });
 
-// Variables for role selection
-let selectedRole = null;
+    document.getElementById("patient-btn").addEventListener("click", function () {
+        selectedRole = "patient";
+        highlightRole("patient-btn");
+    });
 
-// Event listeners for login buttons (Doctor, Patient, Admin)
-document.getElementById('doctor-btn').addEventListener('click', function() {
-    selectedRole = 'doctor';
-    highlightRoleButton(selectedRole);
-});
+    document.getElementById("admin-btn").addEventListener("click", function () {
+        selectedRole = "admin";
+        highlightRole("admin-btn");
+    });
 
-document.getElementById('patient-btn').addEventListener('click', function() {
-    selectedRole = 'patient';
-    highlightRoleButton(selectedRole);
-});
+    // Handle Signup
+    document.getElementById("signup-form").addEventListener("submit", function (event) {
+        event.preventDefault();
 
-document.getElementById('admin-btn').addEventListener('click', function() {
-    selectedRole = 'admin';
-    highlightRoleButton(selectedRole);
-});
+        const newUsername = document.getElementById("new-username").value;
+        const newPassword = document.getElementById("new-password").value;
+        const email = document.getElementById("email").value;
 
-// Function to highlight the selected role button
-function highlightRoleButton(role) {
-    const buttons = document.querySelectorAll('.role-btn');
-    buttons.forEach(button => {
-        if (button.id.toLowerCase().includes(role)) {
-            button.style.backgroundColor = '#0288d1';
-        } else {
-            button.style.backgroundColor = '#03a9f4';
+        if (!selectedRole) {
+            alert("Please select a role before signing up.");
+            return;
+        }
+
+        // Retrieve existing users from localStorage
+        let users = JSON.parse(localStorage.getItem("users")) || [];
+
+        // Check if username already exists
+        if (users.some(user => user.username === newUsername)) {
+            alert("Username already taken. Please choose another.");
+            return;
+        }
+
+        // Save user data
+        users.push({ username: newUsername, password: newPassword, email, role: selectedRole });
+        localStorage.setItem("users", JSON.stringify(users));
+
+        alert("Signup successful! Please log in.");
+        document.getElementById("signup-form").reset();
+        showLoginForm();
+    });
+
+    // Handle Login
+    document.getElementById("login-form").addEventListener("submit", function (event) {
+        event.preventDefault();
+
+        const username = document.getElementById("username").value;
+        const password = document.getElementById("password").value;
+
+        let users = JSON.parse(localStorage.getItem("users")) || [];
+        const user = users.find(u => u.username === username && u.password === password);
+
+        if (!user) {
+            alert("Invalid username or password.");
+            return;
+        }
+
+        if (user.role !== selectedRole) {
+            alert("Selected role does not match your account role.");
+            return;
+        }
+
+        // Store logged-in user details
+        localStorage.setItem("loggedInUser", JSON.stringify(user));
+
+        // Redirect based on role
+        if (user.role === "doctor") {
+            window.location.href = "../doctor/doctor.html";
+        } else if (user.role === "patient") {
+            window.location.href = "../patient/patient.html";
+        } else if (user.role === "admin") {
+            window.location.href = "../admin/admin.html";
         }
     });
-}
 
-// Form submission logic
-document.getElementById('login-form').addEventListener('submit', function(e) {
-    e.preventDefault();
+    // Toggle between login and signup
+    document.getElementById("signup-link").addEventListener("click", showSignupForm);
+    document.getElementById("login-link").addEventListener("click", showLoginForm);
 
-    // Basic form validation
-    const username = document.getElementById('username').value;
-    const password = document.getElementById('password').value;
-
-    if (username === '' || password === '' || selectedRole === null) {
-        alert("Please fill out all fields and select a role.");
-        return;
+    function showSignupForm() {
+        document.getElementById("login-form").classList.add("hidden");
+        document.getElementById("signup-form").classList.remove("hidden");
     }
 
-    // Redirecting based on the role
-    if (selectedRole === 'doctor') {
-        window.location.href = "doctor.html";
-    } else if (selectedRole === 'patient') {
-        window.location.href = "patient.html";
-    } else if (selectedRole === 'admin') {
-        window.location.href = "admin.html";
-    }
-});
-
-// Handle Sign Up form submission (optional)
-document.getElementById('signup-form').addEventListener('submit', function(e) {
-    e.preventDefault();
-
-    // Collect sign up data
-    const newUsername = document.getElementById('new-username').value;
-    const newPassword = document.getElementById('new-password').value;
-    const email = document.getElementById('email').value;
-
-    if (newUsername === '' || newPassword === '' || email === '') {
-        alert("Please fill out all fields.");
-        return;
+    function showLoginForm() {
+        document.getElementById("signup-form").classList.add("hidden");
+        document.getElementById("login-form").classList.remove("hidden");
     }
 
-    // Simulate successful sign-up (you can integrate with backend here)
-    alert("Sign up successful. Please log in.");
-    document.getElementById('signup-form').classList.add('hidden');
-    document.getElementById('login-form').classList.remove('hidden');
+    function highlightRole(selectedId) {
+        document.querySelectorAll(".role-btn").forEach(btn => btn.classList.remove("selected"));
+        document.getElementById(selectedId).classList.add("selected");
+    }
 });
